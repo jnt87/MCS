@@ -1,0 +1,61 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 01:00:47 EDT 2020
+Job ID:     22370.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-6
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 01:00:47 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-8-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-10-l.pace.gatech.edu
+atl1-1-02-012-11-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+mcs num threads: 6
+mcs num threads: 6
+mcs num threads: 6
+mcs num threads: 6
+mcs num threads: 6
+mcs num threads: 6
+avg time on 2 used in us: 6.261301
+avg time on 5 used in us: 6.261353
+avg time on 4 used in us: 6.261330
+avg time on 0 used in us: 6.261246
+avg time on 1 used in us: 6.261330
+avg time on 3 used in us: 6.261358
+dessimination barrier rank: 2
+dessimination barrier rank: 3
+dessimination barrier rank: 5
+dessimination barrier rank: 0
+dessimination barrier rank: 1
+dessimination barrier rank: 4
+Average time us: 4.815395 on proc: 2
+Average time us: 4.815438 on proc: 5
+Average time us: 4.815409 on proc: 4
+Average time us: 4.815314 on proc: 0
+Average time us: 4.815433 on proc: 1
+Average time us: 4.815423 on proc: 3
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 01:00:54 EDT 2020
+Job ID:     22370.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-6
+Resources:  nodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1,mem=1gb,walltime=00:20:00,neednodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1
+Rsrc Used:  cput=00:00:07,vmem=1069048kb,walltime=00:00:05,mem=49792kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-10-l.pace.gatech.edu atl1-1-02-012-11-l.pace.gatech.edu 
+atl1-1-02-012-5-l.pace.gatech.edu atl1-1-02-012-6-l.pace.gatech.edu 
+atl1-1-02-012-6-r.pace.gatech.edu atl1-1-02-012-8-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 01:00:54 EDT 2020
+---------------------------------------

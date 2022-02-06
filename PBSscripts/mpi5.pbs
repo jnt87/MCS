@@ -1,0 +1,22 @@
+#PBS -N cs6210-project2-mpi-5
+#PBS -l nodes=5:ncpus=1:mpiprocs=1
+#PBS -l nodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1
+#PBS -l mem=1gb
+#PBS -l walltime=00:20:00
+#PBS -q pace-ice
+#PBS -j oe
+#PBS -m a
+#PBS -M jthomas8@gatech.edu
+#PBS -o mpijob-5.out
+
+echo "Started on `/bin/hostname`"
+echo "Nodes chosen are:"
+cat $PBS_NODEFILE
+module load gcc/8.3.0 mvapich2/2.3.2
+
+cd /storage/home/hpaceice1/jthomas8/mpi/
+mpicc -Wall mcs.c -o mcs
+mpicc -Wall dissemination.c -o dissemination -lm
+
+mpirun -np 5 ./mcs
+mpirun -np 5 ./dissemination

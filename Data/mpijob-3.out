@@ -1,0 +1,45 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 00:13:31 EDT 2020
+Job ID:     21751.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-3
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 00:13:31 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-9-l.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-9-l.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-10-r.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+mcs num threads: 3
+mcs num threads: 3
+mcs num threads: 3
+avg time on 2 used in us: 2.847998
+avg time on 0 used in us: 2.847934
+avg time on 1 used in us: 2.848027
+dessimination barrier rank: 0
+dessimination barrier rank: 2
+dessimination barrier rank: 1
+Average time us: 2.898142 on proc: 2
+Average time us: 2.898097 on proc: 0
+Average time us: 2.898445 on proc: 1
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 00:13:37 EDT 2020
+Job ID:     21751.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-3
+Resources:  nodes=1:ppn=1+1:ppn=1+1:ppn=1,mem=1gb,walltime=00:10:00,neednodes=1:ppn=1+1:ppn=1+1:ppn=1
+Rsrc Used:  cput=00:00:03,vmem=359792kb,walltime=00:00:04,mem=5548kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-10-r.pace.gatech.edu atl1-1-02-012-9-l.pace.gatech.edu 
+atl1-1-02-012-9-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 00:13:37 EDT 2020
+---------------------------------------

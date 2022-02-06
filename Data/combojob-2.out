@@ -1,0 +1,143 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 03:36:48 EDT 2020
+Job ID:     24238.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-combo-2
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 03:36:48 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-7-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-7-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+num procs: 2
+num procs: 2
+Average time (ns):1098.291200 on thread: 0 on proc: 0
+Average time (ns):1098.188800 on thread: 1 on proc: 0
+Average time (ns):1099.212800 on thread: 0 on proc: 1
+Average time (ns):1099.212800 on thread: 1 on proc: 1
+Average time (ns): 1099.212800 on proc: 1
+Average time (ns): 1098.240000 on proc: 0
+num procs: 2
+num procs: 2
+Average time (ns):1168.307200 on thread: 0 on proc: 0
+Average time (ns):1168.102400 on thread: 1 on proc: 0
+Average time (ns):1172.403200 on thread: 0 on proc: 1
+Average time (ns):1172.403200 on thread: 1 on proc: 1
+Average time (ns):1172.403200 on thread: 2 on proc: 1
+Average time (ns):1167.616000 on thread: 2 on proc: 0
+Average time (ns): 1168.008533 on proc: 0
+Average time (ns): 1172.403200 on proc: 1
+num procs: 2
+num procs: 2
+Average time (ns):1303.296000 on thread: 0 on proc: 0
+Average time (ns):1302.886400 on thread: 2 on proc: 0
+Average time (ns):1303.398400 on thread: 1 on proc: 0
+Average time (ns):1303.398400 on thread: 3 on proc: 0
+Average time (ns): 1303.244800 on proc: 0
+Average time (ns):1929.907200 on thread: 0 on proc: 1
+Average time (ns):1929.395200 on thread: 3 on proc: 1
+Average time (ns):1929.804800 on thread: 1 on proc: 1
+Average time (ns):1929.702400 on thread: 2 on proc: 1
+Average time (ns): 1929.702400 on proc: 1
+num procs: 2
+num procs: 2
+Average time (ns):13031476.300800 on thread: 0 on proc: 0
+Average time (ns):13030598.912000 on thread: 0 on proc: 1
+Average time (ns):13029299.891200 on thread: 3 on proc: 1
+Average time (ns):13030598.400000 on thread: 4 on proc: 1
+Average time (ns):13030598.809600 on thread: 1 on proc: 1
+Average time (ns):13030598.809600 on thread: 2 on proc: 1
+Average time (ns): 13030338.964480 on proc: 1
+Average time (ns):13031476.096000 on thread: 2 on proc: 0
+Average time (ns):13031475.712000 on thread: 4 on proc: 0
+Average time (ns):13031477.708800 on thread: 3 on proc: 0
+Average time (ns):13031478.297600 on thread: 1 on proc: 0
+Average time (ns): 13031476.823040 on proc: 0
+num procs: 2
+num procs: 2
+Average time (ns):13108950.016000 on thread: 0 on proc: 0
+Average time (ns):13107299.993600 on thread: 1 on proc: 1
+Average time (ns):13108948.505600 on thread: 4 on proc: 1
+Average time (ns):13107700.096000 on thread: 5 on proc: 1
+Average time (ns):13108950.297600 on thread: 0 on proc: 1
+Average time (ns):13107701.401600 on thread: 2 on proc: 1
+Average time (ns):13108948.505600 on thread: 3 on proc: 1
+Average time (ns): 13108258.133333 on proc: 1
+Average time (ns):13108950.016000 on thread: 4 on proc: 0
+Average time (ns):13108949.811200 on thread: 3 on proc: 0
+Average time (ns):13108950.016000 on thread: 5 on proc: 0
+Average time (ns):13109356.620800 on thread: 1 on proc: 0
+Average time (ns):13108952.294400 on thread: 2 on proc: 0
+Average time (ns): 13109018.129067 on proc: 0
+num procs: 2
+num procs: 2
+Average time (ns):13468446.003200 on thread: 0 on proc: 0
+Average time (ns):13468445.696000 on thread: 5 on proc: 0
+Average time (ns):13468445.798400 on thread: 1 on proc: 0
+Average time (ns):13468445.593600 on thread: 4 on proc: 0
+Average time (ns):13466799.897600 on thread: 4 on proc: 1
+Average time (ns):13468050.688000 on thread: 3 on proc: 1
+Average time (ns):13467201.408000 on thread: 1 on proc: 1
+Average time (ns):13468049.203200 on thread: 6 on proc: 1
+Average time (ns):13467602.892800 on thread: 0 on proc: 1
+Average time (ns):13468445.593600 on thread: 2 on proc: 0
+Average time (ns):13468447.590400 on thread: 3 on proc: 0
+Average time (ns):13467200.000000 on thread: 6 on proc: 0
+Average time (ns): 13468268.039314 on proc: 0
+Average time (ns):13468451.993600 on thread: 2 on proc: 1
+Average time (ns):13468451.993600 on thread: 5 on proc: 1
+Average time (ns): 13467801.153829 on proc: 1
+num procs: 2
+num procs: 2
+Average time (ns):13506900.096000 on thread: 5 on proc: 0
+Average time (ns):13509898.188800 on thread: 6 on proc: 1
+Average time (ns):13509898.188800 on thread: 3 on proc: 1
+Average time (ns):13509898.086400 on thread: 4 on proc: 1
+Average time (ns):13509001.984000 on thread: 0 on proc: 1
+Average time (ns):13509897.984000 on thread: 1 on proc: 1
+Average time (ns):13509898.086400 on thread: 7 on proc: 1
+Average time (ns):13509899.801600 on thread: 5 on proc: 1
+Average time (ns):13508723.276800 on thread: 2 on proc: 0
+Average time (ns):13509098.982400 on thread: 6 on proc: 0
+Average time (ns):13509898.188800 on thread: 2 on proc: 1
+Average time (ns): 13509786.313600 on proc: 1
+Average time (ns):13508700.416000 on thread: 3 on proc: 0
+Average time (ns):13508701.107200 on thread: 0 on proc: 0
+Average time (ns):13508700.902400 on thread: 4 on proc: 0
+Average time (ns):13508599.782400 on thread: 1 on proc: 0
+Average time (ns):13508215.705600 on thread: 7 on proc: 0
+Average time (ns): 13508455.033600 on proc: 0
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 03:45:50 EDT 2020
+Job ID:     24238.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-combo-2
+Resources:  nodes=1:ppn=8+1:ppn=8,mem=1gb,walltime=06:00:00,neednodes=1:ppn=8+1:ppn=8
+Rsrc Used:  cput=01:10:43,vmem=642348kb,walltime=00:08:57,mem=30136kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-5-r.pace.gatech.edu atl1-1-02-012-7-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 03:45:55 EDT 2020
+---------------------------------------

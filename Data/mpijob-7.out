@@ -1,0 +1,67 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 01:01:02 EDT 2020
+Job ID:     22378.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-7
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 01:01:02 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-8-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-9-l.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-10-l.pace.gatech.edu
+atl1-1-02-012-11-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+mcs num threads: 7
+mcs num threads: 7
+mcs num threads: 7
+mcs num threads: 7
+mcs num threads: 7
+mcs num threads: 7
+mcs num threads: 7
+avg time on 4 used in us: 6.658387
+avg time on 6 used in us: 6.658392
+avg time on 3 used in us: 6.658242
+avg time on 2 used in us: 6.658399
+avg time on 1 used in us: 6.658361
+avg time on 0 used in us: 6.658340
+avg time on 5 used in us: 6.658442
+dessimination barrier rank: 0
+dessimination barrier rank: 2
+dessimination barrier rank: 3
+dessimination barrier rank: 1
+dessimination barrier rank: 6
+dessimination barrier rank: 4
+dessimination barrier rank: 5
+Average time us: 5.483813 on proc: 4
+Average time us: 5.483830 on proc: 6
+Average time us: 5.483763 on proc: 0
+Average time us: 5.483789 on proc: 3
+Average time us: 5.483849 on proc: 2
+Average time us: 5.483861 on proc: 1
+Average time us: 5.483892 on proc: 5
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 01:01:11 EDT 2020
+Job ID:     22378.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-7
+Resources:  nodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1,mem=1gb,walltime=00:20:00,neednodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1
+Rsrc Used:  cput=00:00:09,vmem=9700292kb,walltime=00:00:07,mem=109776kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-10-l.pace.gatech.edu atl1-1-02-012-11-l.pace.gatech.edu 
+atl1-1-02-012-5-l.pace.gatech.edu atl1-1-02-012-6-l.pace.gatech.edu 
+atl1-1-02-012-8-r.pace.gatech.edu atl1-1-02-012-9-l.pace.gatech.edu 
+atl1-1-02-012-9-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 01:01:11 EDT 2020
+---------------------------------------

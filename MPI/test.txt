@@ -1,0 +1,4 @@
+mcs num threads: 2
+mcs num threads: 2
+avg time on 0 used in us: 0.383182
+avg time on 1 used in us: 0.383005

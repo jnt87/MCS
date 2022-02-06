@@ -1,0 +1,1178 @@
+==48734== Memcheck, a memory error detector
+==48734== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==48734== Using Valgrind-3.16.1-36d6727e1d-20200622X and LibVEX; rerun with -h for copyright info
+==48734== Command: mpirun -n 2 ./mcs
+==48734== Parent PID: 1881
+==48734== 
+--48734-- 
+--48734-- Valgrind options:
+--48734--    --leak-check=full
+--48734--    --show-leak-kinds=all
+--48734--    --track-origins=yes
+--48734--    --verbose
+--48734--    --log-file=out.txt
+--48734-- Contents of /proc/version:
+--48734--   Linux version 5.8.11-1-MANJARO (builder@4970a884831b) (gcc (GCC) 10.2.0, GNU ld (GNU Binutils) 2.35) #1 SMP PREEMPT Wed Sep 23 14:35:40 UTC 2020
+--48734-- 
+--48734-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--48734-- Page sizes: currently 4096, max supported 4096
+--48734-- Valgrind library directory: /usr/lib/valgrind
+--48734-- Reading syms from /usr/bin/orterun
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/ld-2.32.so
+--48734-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--48734--    object doesn't have a dynamic symbol table
+--48734-- Scheduler: using generic scheduler lock implementation.
+--48734-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==48734== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-48734-by-jthomas8-on-???
+==48734== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-48734-by-jthomas8-on-???
+==48734== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-48734-by-jthomas8-on-???
+==48734== 
+==48734== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==48734== don't want to do, unless you know exactly what you're doing,
+==48734== or are doing some strange experiment):
+==48734==   /usr/lib/valgrind/../../bin/vgdb --pid=48734 ...command...
+==48734== 
+==48734== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==48734==   /path/to/gdb mpirun
+==48734== and then give GDB the following command
+==48734==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=48734
+==48734== --pid is optional if only one valgrind process is running
+==48734== 
+--48734-- REDIR: 0x4021ee0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580b9662 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--48734-- REDIR: 0x4021cb0 (ld-linux-x86-64.so.2:index) redirected to 0x580b967c (vgPlain_amd64_linux_REDIR_FOR_index)
+--48734-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--48734-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04021ee0 (strlen              ) R-> (0000.0) 0x580b9662 vgPlain_amd64_linux_REDIR_FOR_strlen
+--48734--     new: 0x04021ee0 (strlen              ) R-> (2007.0) 0x0483dd90 strlen
+--48734-- REDIR: 0x401e6c0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ec60 (strcmp)
+--48734-- REDIR: 0x4022440 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4842450 (mempcpy)
+--48734-- Reading syms from /usr/lib/openmpi/libopen-rte.so.40.20.5
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/libopen-pal.so.40.20.5
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libc-2.32.so
+--48734-- Reading syms from /usr/lib/libdl-2.32.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/librt-2.32.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libm-2.32.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libutil-2.32.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libz.so.1.2.11
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libhwloc.so.15.2.0
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libpthread-2.32.so
+--48734-- Reading syms from /usr/lib/libudev.so.1.6.18
+--48734--    object doesn't have a symbol table
+--48734-- REDIR: 0x4a8d8c0 (libc.so.6:memmove) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8cdb0 (libc.so.6:strncpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dc00 (libc.so.6:strcasecmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8c850 (libc.so.6:strcat) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8ce10 (libc.so.6:rindex) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8efb0 (libc.so.6:rawmemchr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa7500 (libc.so.6:wmemchr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa7040 (libc.so.6:wcscmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8da20 (libc.so.6:mempcpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8d850 (libc.so.6:bcmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8cd40 (libc.so.6:strncmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8c900 (libc.so.6:strcmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8d990 (libc.so.6:memset) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa7000 (libc.so.6:wcschr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8cca0 (libc.so.6:strnlen) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8c9e0 (libc.so.6:strcspn) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dc50 (libc.so.6:strncasecmp) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8c980 (libc.so.6:strcpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dda0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa8750 (libc.so.6:wcsnlen) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa7080 (libc.so.6:wcscpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8ce50 (libc.so.6:strpbrk) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8c8b0 (libc.so.6:index) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8cc60 (libc.so.6:strlen) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a933a0 (libc.so.6:memrchr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dca0 (libc.so.6:strcasecmp_l) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8d810 (libc.so.6:memchr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4aa7150 (libc.so.6:wcslen) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8cf80 (libc.so.6:strspn) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dba0 (libc.so.6:stpncpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8db40 (libc.so.6:stpcpy) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8eff0 (libc.so.6:strchrnul) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8dcf0 (libc.so.6:strncasecmp_l) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4a8d730 (libc.so.6:strstr) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4b0a870 (libc.so.6:__memmove_chk) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+--48734-- REDIR: 0x4b0a7a0 (libc.so.6:__memcpy_chk) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+--48734-- REDIR: 0x4a8cce0 (libc.so.6:strncat) redirected to 0x48301c0 (_vgnU_ifunc_wrapper)
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+--48734-- REDIR: 0x4b5f8a0 (libc.so.6:__strrchr_avx2) redirected to 0x483d7d0 (rindex)
+--48734-- REDIR: 0x4b5fa70 (libc.so.6:__strlen_avx2) redirected to 0x483dc70 (strlen)
+--48734-- REDIR: 0x4a88c90 (libc.so.6:malloc) redirected to 0x483a710 (malloc)
+--48734-- REDIR: 0x4b62a80 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48414b0 (memmove)
+--48734-- REDIR: 0x4a89580 (libc.so.6:realloc) redirected to 0x483cd00 (realloc)
+--48734-- REDIR: 0x4b62f00 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x48413b0 (memset)
+--48734-- REDIR: 0x4b5f6b0 (libc.so.6:__strchrnul_avx2) redirected to 0x4841f40 (strchrnul)
+--48734-- REDIR: 0x4a892f0 (libc.so.6:free) redirected to 0x483b940 (free)
+--48734-- REDIR: 0x4b5b3a0 (libc.so.6:__strncmp_avx2) redirected to 0x483e340 (strncmp)
+--48734-- REDIR: 0x4a89a50 (libc.so.6:calloc) redirected to 0x483cab0 (calloc)
+--48734-- REDIR: 0x4aa5ba0 (libc.so.6:__strstr_sse2_unaligned) redirected to 0x4842660 (strstr)
+--48734-- REDIR: 0x4b61340 (libc.so.6:__strncpy_avx2) redirected to 0x483df40 (strncpy)
+--48734-- REDIR: 0x4a3ca00 (libc.so.6:setenv) redirected to 0x4842ec0 (setenv)
+--48734-- REDIR: 0x4b5f480 (libc.so.6:__strchr_avx2) redirected to 0x483d950 (index)
+--48734-- REDIR: 0x4b62a60 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4842050 (mempcpy)
+--48734-- REDIR: 0x4b5af60 (libc.so.6:__strcmp_avx2) redirected to 0x483eb60 (strcmp)
+--48734-- REDIR: 0x4b605a0 (libc.so.6:__strncat_avx2) redirected to 0x483db20 (strncat)
+--48734-- REDIR: 0x4b5c060 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4840c50 (bcmp)
+--48734-- REDIR: 0x4a8d430 (libc.so.6:__GI_strstr) redirected to 0x48426f0 (__strstr_sse2)
+--48734-- REDIR: 0x4b5bba0 (libc.so.6:__rawmemchr_avx2) redirected to 0x4841f70 (rawmemchr)
+--48734-- REDIR: 0x4b5c440 (libc.so.6:__strcasecmp_avx) redirected to 0x483e500 (strcasecmp)
+--48734-- REDIR: 0x4b5dac0 (libc.so.6:__strncasecmp_avx) redirected to 0x483e5c0 (strncasecmp)
+--48734-- REDIR: 0x4b5ae30 (libc.so.6:__strspn_sse42) redirected to 0x4842970 (strspn)
+--48734-- REDIR: 0x4b5abb0 (libc.so.6:__strcspn_sse42) redirected to 0x4842870 (strcspn)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_schizo_flux.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_schizo_orte.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_schizo_ompi.so
+--48734--    object doesn't have a symbol table
+--48734-- REDIR: 0x4b5b8d0 (libc.so.6:__memchr_avx2) redirected to 0x483ece0 (memchr)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_shmem_sysv.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_shmem_mmap.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_shmem_posix.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x49d7020-0x49d77a6 in /usr/lib/openmpi/openmpi/mca_shmem_sysv.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49e1020-0x49e1b44 in /usr/lib/openmpi/openmpi/mca_shmem_posix.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_reachable_weighted.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_reachable_netlink.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libnl-3.so.200.26.0
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libnl-route-3.so.200.26.0
+--48734--    object doesn't have a symbol table
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+--48734-- Discarding syms at 0x49d7020-0x49d75b6 in /usr/lib/openmpi/openmpi/mca_reachable_weighted.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ess_env.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ess_tool.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ess_pmi.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ess_singleton.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ess_hnp.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x49d7020-0x49d735b in /usr/lib/openmpi/openmpi/mca_ess_env.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49e6020-0x49e6ae4 in /usr/lib/openmpi/openmpi/mca_ess_tool.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49ec020-0x49eeb6f in /usr/lib/openmpi/openmpi/mca_ess_pmi.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49f4020-0x49f5d09 in /usr/lib/openmpi/openmpi/mca_ess_singleton.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/hwloc/hwloc_xml_libxml.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libxml2.so.2.9.10
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libicuuc.so.67.1
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/liblzma.so.5.2.5
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libstdc++.so.6.0.28
+--48734-- Reading syms from /usr/lib/libgcc_s.so.1
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+--48734-- Reading syms from /usr/lib/hwloc/hwloc_pci.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libpciaccess.so.0.11.1
+--48734--    object doesn't have a symbol table
+--48734-- REDIR: 0x4b60fb0 (libc.so.6:__strcpy_avx2) redirected to 0x483ddc0 (strcpy)
+--48734-- REDIR: 0x4b61ca0 (libc.so.6:__stpcpy_avx2) redirected to 0x4840d70 (stpcpy)
+--48734-- REDIR: 0x4b5fc10 (libc.so.6:__strnlen_avx2) redirected to 0x483dc10 (strnlen)
+--48734-- REDIR: 0x4a8a0e0 (libc.so.6:malloc_usable_size) redirected to 0x483d180 (malloc_usable_size)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_pstat_linux.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_state_orted.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_state_hnp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_state_app.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_state_novm.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_state_tool.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x5212020-0x5213d05 in /usr/lib/openmpi/openmpi/mca_state_orted.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52cb020-0x52cb410 in /usr/lib/openmpi/openmpi/mca_state_app.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52d1020-0x52d1a77 in /usr/lib/openmpi/openmpi/mca_state_novm.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52d6020-0x52d6410 in /usr/lib/openmpi/openmpi/mca_state_tool.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_errmgr_default_hnp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_errmgr_default_tool.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_errmgr_default_app.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_errmgr_default_orted.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_plm_isolated.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_plm_rsh.so
+--48734--    object doesn't have a symbol table
+--48734-- REDIR: 0x4b5ff30 (libc.so.6:__strcat_avx2) redirected to 0x483d980 (strcat)
+--48734-- Discarding syms at 0x52dd020-0x52dd467 in /usr/lib/openmpi/openmpi/mca_plm_isolated.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_pmix_flux.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_pmix_pmix3x.so
+--48734--    object doesn't have a symbol table
+==48734== WARNING: new redirection conflicts with existing -- ignoring it
+--48734--     old: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2024.0) 0x04841ec0 __memmove_chk
+--48734--     new: 0x04b62a70 (__memcpy_chk_avx_una) R-> (2030.0) 0x04842550 __memcpy_chk
+--48734-- Discarding syms at 0x52ef020-0x52f0672 in /usr/lib/openmpi/openmpi/mca_pmix_flux.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_bfrops_v21.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_bfrops_v20.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_bfrops_v12.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_bfrops_v3.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_ptl_tcp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_ptl_usock.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_psec_native.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_psec_none.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x52f8020-0x52f845d in /usr/lib/openmpi/pmix/mca_psec_none.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_gds_ds12.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/libmca_common_dstore.so.1.0.2
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_gds_hash.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_gds_ds21.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_pshmem_mmap.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_preg_native.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_plog_syslog.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_plog_default.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_plog_stdfd.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_pnet_tcp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_pnet_test.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x9910020-0x9912a21 in /usr/lib/openmpi/pmix/mca_pnet_test.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_psensor_file.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/pmix/mca_psensor_heartbeat.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_routed_direct.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_routed_radix.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_routed_binomial.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_oob_tcp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rml_oob.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_grpcomm_direct.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x52cb020-0x52cb337 in /usr/lib/openmpi/openmpi/mca_errmgr_default_tool.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52d0020-0x52d081e in /usr/lib/openmpi/openmpi/mca_errmgr_default_app.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52d6020-0x52d864b in /usr/lib/openmpi/openmpi/mca_errmgr_default_orted.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_ras_simulator.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0x52cc020-0x52ccec8 in /usr/lib/openmpi/openmpi/mca_ras_simulator.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_round_robin.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_ppr.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_resilient.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_rank_file.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_seq.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rmaps_mindist.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_regx_naive.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_regx_reverse.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_regx_fwd.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0xa972020-0xa9729b0 in /usr/lib/openmpi/openmpi/mca_regx_naive.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa977020-0xa978280 in /usr/lib/openmpi/openmpi/mca_regx_reverse.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_odls_pspawn.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_odls_default.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0xa973020-0xa973849 in /usr/lib/openmpi/openmpi/mca_odls_pspawn.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_rtc_hwloc.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_iof_orted.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_iof_hnp.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_iof_tool.so
+--48734--    object doesn't have a symbol table
+--48734-- Discarding syms at 0xa98a020-0xa98be53 in /usr/lib/openmpi/openmpi/mca_iof_orted.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa999020-0xa999cbf in /usr/lib/openmpi/openmpi/mca_iof_tool.so (have_dinfo 1)
+--48734-- Reading syms from /usr/lib/openmpi/openmpi/mca_filem_raw.so
+--48734--    object doesn't have a symbol table
+--48734-- Reading syms from /usr/lib/libnss_files-2.32.so
+--48734--    object doesn't have a symbol table
+==48734== Warning: noted but unhandled ioctl 0x5441 with no size/direction hints.
+==48734==    This could cause spurious value errors to appear.
+==48734==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==48748== Warning: invalid file descriptor 1024 in syscall close()
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48748== Warning: invalid file descriptor 1025 in syscall close()
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48748== Warning: invalid file descriptor 1026 in syscall close()
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48748== Warning: invalid file descriptor 1027 in syscall close()
+==48748==    Use --log-fd=<number> to select an alternative log fd.
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48748== Warning: invalid file descriptor 1028 in syscall close()
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48748== Warning: invalid file descriptor 1029 in syscall close()
+==48748==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48748==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48748==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48748==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48748==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48748==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1024 in syscall close()
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1025 in syscall close()
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1026 in syscall close()
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1027 in syscall close()
+==48749==    Use --log-fd=<number> to select an alternative log fd.
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1028 in syscall close()
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48749== Warning: invalid file descriptor 1029 in syscall close()
+==48749==    at 0x4AEE72B: close (in /usr/lib/libc-2.32.so)
+==48749==    by 0xA984A80: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0xA984EC5: ??? (in /usr/lib/openmpi/openmpi/mca_odls_default.so)
+==48749==    by 0x48A2C98: orte_odls_base_spawn_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48749==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48749==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48749==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+--48734-- Discarding syms at 0x9910020-0x99119f5 in /usr/lib/openmpi/pmix/mca_psensor_file.so (have_dinfo 1)
+--48734-- Discarding syms at 0x9916020-0x99179a5 in /usr/lib/openmpi/pmix/mca_psensor_heartbeat.so (have_dinfo 1)
+--48734-- Discarding syms at 0x9905020-0x990aab8 in /usr/lib/openmpi/pmix/mca_pnet_tcp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90f3020-0x90f39ca in /usr/lib/openmpi/pmix/mca_plog_syslog.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90f8020-0x90f9053 in /usr/lib/openmpi/pmix/mca_plog_default.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90fe020-0x90fe3f3 in /usr/lib/openmpi/pmix/mca_plog_stdfd.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90eb020-0x90ee454 in /usr/lib/openmpi/pmix/mca_preg_native.so (have_dinfo 1)
+--48734-- Discarding syms at 0x909b020-0x90a77d1 in /usr/lib/openmpi/pmix/mca_ptl_tcp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90af020-0x90b3d03 in /usr/lib/openmpi/pmix/mca_ptl_usock.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52dd020-0x52dd8bf in /usr/lib/openmpi/pmix/mca_psec_native.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52f1020-0x52f3cdb in /usr/lib/openmpi/pmix/mca_bfrops_v21.so (have_dinfo 1)
+--48734-- Discarding syms at 0x9063020-0x9070849 in /usr/lib/openmpi/pmix/mca_bfrops_v20.so (have_dinfo 1)
+--48734-- Discarding syms at 0x907e020-0x9086d26 in /usr/lib/openmpi/pmix/mca_bfrops_v12.so (have_dinfo 1)
+--48734-- Discarding syms at 0x9092020-0x9094ade in /usr/lib/openmpi/pmix/mca_bfrops_v3.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90e6020-0x90e6733 in /usr/lib/openmpi/pmix/mca_pshmem_mmap.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52f9020-0x52f9fbc in /usr/lib/openmpi/pmix/mca_gds_ds12.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90ca020-0x90d947d in /usr/lib/openmpi/pmix/mca_gds_hash.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90e0020-0x90e1263 in /usr/lib/openmpi/pmix/mca_gds_ds21.so (have_dinfo 1)
+--48734-- Discarding syms at 0x90ba020-0x90c33b9 in /usr/lib/openmpi/libmca_common_dstore.so.1.0.2 (have_dinfo 1)
+--48734-- Discarding syms at 0x8f76020-0x90304af in /usr/lib/openmpi/openmpi/mca_pmix_pmix3x.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa99a020-0xa99d1f8 in /usr/lib/openmpi/openmpi/mca_filem_raw.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa991020-0xa9945f3 in /usr/lib/openmpi/openmpi/mca_iof_hnp.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa973020-0xa974b18 in /usr/lib/openmpi/openmpi/mca_rtc_hwloc.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa984020-0xa984ec6 in /usr/lib/openmpi/openmpi/mca_odls_default.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52cc020-0x52ce598 in /usr/lib/openmpi/openmpi/mca_rmaps_round_robin.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52d4020-0x52d5d33 in /usr/lib/openmpi/openmpi/mca_rmaps_ppr.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa953020-0xa9551c0 in /usr/lib/openmpi/openmpi/mca_rmaps_resilient.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa95c020-0xa95ee53 in /usr/lib/openmpi/openmpi/mca_rmaps_rank_file.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa966020-0xa967773 in /usr/lib/openmpi/openmpi/mca_rmaps_seq.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa96c020-0xa96d753 in /usr/lib/openmpi/openmpi/mca_rmaps_mindist.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa94b020-0xa94ddf3 in /usr/lib/openmpi/openmpi/mca_grpcomm_direct.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa11d020-0xa11d8fb in /usr/lib/openmpi/openmpi/mca_routed_direct.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa122020-0xa122c21 in /usr/lib/openmpi/openmpi/mca_routed_radix.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa127020-0xa127b83 in /usr/lib/openmpi/openmpi/mca_routed_binomial.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52e4020-0x52e814b in /usr/lib/openmpi/openmpi/mca_plm_rsh.so (have_dinfo 1)
+--48734-- Discarding syms at 0x5212020-0x5213fbd in /usr/lib/openmpi/openmpi/mca_errmgr_default_hnp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x52c5020-0x52c6320 in /usr/lib/openmpi/openmpi/mca_state_hnp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49f8020-0x49f965e in /usr/lib/openmpi/openmpi/mca_pstat_linux.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa944020-0xa945102 in /usr/lib/openmpi/openmpi/mca_rml_oob.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa12f020-0xa139448 in /usr/lib/openmpi/openmpi/mca_oob_tcp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x51e2020-0x51e4576 in /usr/lib/openmpi/openmpi/mca_ess_hnp.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49c1020-0x49c1367 in /usr/lib/openmpi/openmpi/mca_schizo_flux.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49c6020-0x49c6307 in /usr/lib/openmpi/openmpi/mca_schizo_orte.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49ce020-0x49cfbe4 in /usr/lib/openmpi/openmpi/mca_schizo_ompi.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49e1020-0x49e1923 in /usr/lib/openmpi/openmpi/mca_reachable_netlink.so (have_dinfo 1)
+--48734-- Discarding syms at 0x525b020-0x529742d in /usr/lib/libnl-route-3.so.200.26.0 (have_dinfo 1)
+--48734-- Discarding syms at 0x5224020-0x52323e5 in /usr/lib/libnl-3.so.200.26.0 (have_dinfo 1)
+--48734-- Discarding syms at 0x49e6020-0x49e71f1 in /usr/lib/hwloc/hwloc_xml_libxml.so (have_dinfo 1)
+--48734-- Discarding syms at 0x532e020-0x540fabf in /usr/lib/libxml2.so.2.9.10 (have_dinfo 1)
+--48734-- Discarding syms at 0x54ca020-0x55af0c7 in /usr/lib/libicuuc.so.67.1 (have_dinfo 1)
+--48734-- Discarding syms at 0x51eb020-0x5201e73 in /usr/lib/liblzma.so.5.2.5 (have_dinfo 1)
+--48734-- Discarding syms at 0x49d7020-0x49d7d03 in /usr/lib/hwloc/hwloc_pci.so (have_dinfo 1)
+--48734-- Discarding syms at 0x49ee020-0x49f2593 in /usr/lib/libpciaccess.so.0.11.1 (have_dinfo 1)
+--48734-- Discarding syms at 0x49dc020-0x49dcdf4 in /usr/lib/openmpi/openmpi/mca_shmem_mmap.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa97d020-0xa97e1bf in /usr/lib/openmpi/openmpi/mca_regx_fwd.so (have_dinfo 1)
+--48734-- Discarding syms at 0xa9e1550-0xa9e717c in /usr/lib/libnss_files-2.32.so (have_dinfo 1)
+==48734== 
+==48734== HEAP SUMMARY:
+==48734==     in use at exit: 855,969 bytes in 10,926 blocks
+==48734==   total heap usage: 45,802 allocs, 34,876 frees, 1,391,435,473 bytes allocated
+==48734== 
+==48734== Searching for pointers to 10,926 not-freed blocks
+==48734== Checked 238,184 bytes
+==48734== 
+==48734== 5 bytes in 1 blocks are definitely lost in loss record 1 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x8FD099A: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 8 bytes in 1 blocks are still reachable in loss record 2 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x48A1E79: orte_odls_base_start_threads (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A55A7: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 8 bytes in 1 blocks are indirectly lost in loss record 3 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x492910F: opal_pointer_array_init (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x486069C: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2CC0: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 8 bytes in 2 blocks are indirectly lost in loss record 4 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x487CB1F: orte_attr_load (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x487CC88: orte_set_attribute (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C2FD8: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C4634: orte_rmaps_base_compute_bindings (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5FF2: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734== 
+==48734== 9 bytes in 1 blocks are indirectly lost in loss record 5 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x51E2CD6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 11 bytes in 1 blocks are indirectly lost in loss record 6 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x8FD0B73: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 11 bytes in 1 blocks are indirectly lost in loss record 7 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x8FD0B8C: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 15 bytes in 1 blocks are indirectly lost in loss record 8 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0xA974705: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 15 bytes in 1 blocks are indirectly lost in loss record 9 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0xA9747AD: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 15 bytes in 1 blocks are indirectly lost in loss record 10 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0xA97484D: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 18 bytes in 2 blocks are still reachable in loss record 11 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x48D89AA: orte_debugger_init_after_spawn (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 18 bytes in 2 blocks are indirectly lost in loss record 12 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x901C348: ???
+==48734==    by 0x901DD03: ???
+==48734==    by 0x901E3CE: ???
+==48734==    by 0x901B5E3: ???
+==48734==    by 0x8FEB208: ???
+==48734==    by 0x8FD283B: ???
+==48734==    by 0x8FD3BD2: ???
+==48734==    by 0x902B1A2: ???
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x8FEEFEE: ???
+==48734==    by 0x4D993E8: start_thread (in /usr/lib/libpthread-2.32.so)
+==48734== 
+==48734== 40 bytes in 1 blocks are still reachable in loss record 13 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4974803: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4972C53: opal_libevent2022_event_global_setup_locks_ (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x497490C: opal_libevent2022_evthread_use_pthreads (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x496C78D: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4955F36: mca_base_framework_open (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x492F146: opal_init (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x48D507A: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 40 bytes in 1 blocks are still reachable in loss record 14 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4974803: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4979424: opal_libevent2022_evsig_global_setup_locks_ (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4972C67: opal_libevent2022_event_global_setup_locks_ (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x497490C: opal_libevent2022_evthread_use_pthreads (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x496C78D: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4955F36: mca_base_framework_open (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x492F146: opal_init (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x48D507A: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 40 bytes in 1 blocks are still reachable in loss record 15 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4974803: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4977654: opal_libevent2022_evutil_secure_rng_global_setup_locks_ (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4972C73: opal_libevent2022_event_global_setup_locks_ (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x497490C: opal_libevent2022_evthread_use_pthreads (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x496C78D: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4955F36: mca_base_framework_open (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x492F146: opal_init (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x48D507A: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 43 bytes in 1 blocks are indirectly lost in loss record 16 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0xA97471B: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 47 bytes in 2 blocks are still reachable in loss record 17 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x401E68F: strdup (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4018D6B: _dl_load_cache_lookup (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400AC28: _dl_map_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400F1E4: openaux (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x400F572: _dl_map_object_deps (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4015439: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 47 bytes in 2 blocks are still reachable in loss record 18 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x400D408: _dl_new_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4009095: _dl_map_object_from_fd (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400A71C: _dl_map_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400F1E4: openaux (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x400F572: _dl_map_object_deps (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4015439: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 48 bytes in 1 blocks are still reachable in loss record 19 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x494BA81: mca_base_component_repository_open (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x494AADC: mca_base_component_find (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x495596A: mca_base_framework_components_register (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4955EA1: mca_base_framework_register (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4955EE0: mca_base_framework_open (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E2F64: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 48 bytes in 1 blocks are still reachable in loss record 20 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x48D8826: orte_debugger_init_after_spawn (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 64 bytes in 1 blocks are still reachable in loss record 21 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA992031: ???
+==48734==    by 0x48AE445: orte_plm_base_post_launch (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 64 bytes in 2 blocks are still reachable in loss record 22 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4016752: _dl_close_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x40170A1: _dl_close (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4B38152: _dl_catch_error (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4BC7B88: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4BC7477: dlclose (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4D520E0: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D53366: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4B8FC: hwloc_topology_destroy (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x49795D9: ??? (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x495600C: mca_base_framework_close (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734== 
+==48734== 81 bytes in 4 blocks are indirectly lost in loss record 23 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x49EFDF8: ???
+==48734==    by 0x49EFEBC: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 88 bytes in 1 blocks are still reachable in loss record 24 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA9917D5: ???
+==48734==    by 0x48A0BB2: orte_iof_base_setup_parent (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A697B: orte_odls_base_default_launch_local (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 88 bytes in 1 blocks are indirectly lost in loss record 25 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x8FD1153: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 120 bytes in 1 blocks are indirectly lost in loss record 26 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x4860630: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2CC0: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 128 bytes in 4 blocks are indirectly lost in loss record 27 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x49EFA2F: ???
+==48734==    by 0x49EFE3B: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 136 bytes in 1 blocks are still reachable in loss record 28 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x489E8AC: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA992070: ???
+==48734==    by 0x48AE445: orte_plm_base_post_launch (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 136 bytes in 1 blocks are indirectly lost in loss record 29 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA9746B1: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 136 bytes in 1 blocks are indirectly lost in loss record 30 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA97475A: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 136 bytes in 1 blocks are indirectly lost in loss record 31 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA9747FC: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 136 bytes in 1 blocks are definitely lost in loss record 32 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x48C266A: orte_rmaps_base_print_mapping (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4889B30: orte_pmix_server_register_nspace (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5512: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 146 bytes in 2 blocks are still reachable in loss record 33 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x49609E4: opal_os_path (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x48D88DC: orte_debugger_init_after_spawn (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 176 bytes in 1 blocks are indirectly lost in loss record 34 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x51E2C7B: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 224 bytes in 2 blocks are indirectly lost in loss record 35 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x487CC1E: orte_set_attribute (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x52CD79C: ???
+==48734==    by 0x52CC563: ???
+==48734==    by 0x48BD7A9: orte_rmaps_base_map_job (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 224 bytes in 2 blocks are indirectly lost in loss record 36 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x487CC1E: orte_set_attribute (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C2FF6: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C4634: orte_rmaps_base_compute_bindings (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5FF2: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 336 bytes in 2 blocks are indirectly lost in loss record 37 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x48BFC56: orte_rmaps_base_setup_proc (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x52CD76C: ???
+==48734==    by 0x52CC563: ???
+==48734==    by 0x48BD7A9: orte_rmaps_base_map_job (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 464 bytes in 1 blocks are indirectly lost in loss record 38 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x8FEE262: ???
+==48734==    by 0x8FD0386: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 512 bytes in 1 blocks are indirectly lost in loss record 39 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x49290F0: opal_pointer_array_init (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x486069C: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2CC0: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 512 bytes in 2 blocks are definitely lost in loss record 40 of 55
+==48734==    at 0x483CD7B: realloc (vg_replace_malloc.c:834)
+==48734==    by 0x901520E: ???
+==48734==    by 0x9016488: ???
+==48734==    by 0x901693C: ???
+==48734==    by 0x90176AF: ???
+==48734==    by 0x9017ED1: ???
+==48734==    by 0x901754B: ???
+==48734==    by 0x90175BE: ???
+==48734==    by 0x901668E: ???
+==48734==    by 0x90CA228: ???
+==48734==    by 0x8FE9E3F: ???
+==48734==    by 0x8FEB689: ???
+==48734== 
+==48734== 560 (64 direct, 496 indirect) bytes in 1 blocks are definitely lost in loss record 41 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0xA9748C5: ???
+==48734==    by 0x48C8B51: orte_rtc_base_assign (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A559C: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 1,214 (640 direct, 574 indirect) bytes in 1 blocks are definitely lost in loss record 42 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x8FD0778: ???
+==48734==    by 0x8F85343: ???
+==48734==    by 0x4887205: pmix_server_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x51E2750: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x1091EF: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 1,632 bytes in 12 blocks are indirectly lost in loss record 43 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x49EF9F9: ???
+==48734==    by 0x49EFE3B: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 1,841 (224 direct, 1,617 indirect) bytes in 2 blocks are definitely lost in loss record 44 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x487CC1E: orte_set_attribute (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C2FD8: ??? (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C4634: orte_rmaps_base_compute_bindings (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5FF2: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 1,848 bytes in 2 blocks are still reachable in loss record 45 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x4012C25: _dl_check_map_versions (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4015482: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4B38152: _dl_catch_error (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4BC7B88: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4BC73D7: dlopen (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4D52219: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D52DD0: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734== 
+==48734== 2,048 bytes in 1 blocks are definitely lost in loss record 46 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4934B5F: opal_dss_buffer_extend (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4936C61: opal_dss_pack_int32 (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4936CD6: opal_dss_pack (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x488A768: orte_pmix_server_register_nspace (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5512: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 2,048 bytes in 1 blocks are definitely lost in loss record 47 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4934B5F: opal_dss_buffer_extend (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4936C61: opal_dss_pack_int32 (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x4936CD6: opal_dss_pack (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x488A85F: orte_pmix_server_register_nspace (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48A5512: orte_odls_base_default_construct_child_list (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0xA984852: ???
+==48734==    by 0x488156F: orte_daemon_recv (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48C5EB0: orte_rml_base_process_msg (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x10928A: ??? (in /usr/bin/orterun)
+==48734==    by 0x4A25151: (below main) (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 2,226 (2,208 direct, 18 indirect) bytes in 2 blocks are definitely lost in loss record 48 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x8FEB182: ???
+==48734==    by 0x8FD283B: ???
+==48734==    by 0x8FD3BD2: ???
+==48734==    by 0x902B1A2: ???
+==48734==    by 0x4970371: opal_libevent2022_event_base_loop (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x8FEEFEE: ???
+==48734==    by 0x4D993E8: start_thread (in /usr/lib/libpthread-2.32.so)
+==48734==    by 0x4AFD292: clone (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 2,397 bytes in 2 blocks are still reachable in loss record 49 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x400D124: _dl_new_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4009095: _dl_map_object_from_fd (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400A71C: _dl_map_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400F1E4: openaux (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x400F572: _dl_map_object_deps (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4015439: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734== 
+==48734== 4,064 bytes in 1 blocks are still reachable in loss record 50 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x400BDC6: do_lookup_x (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400C120: _dl_lookup_symbol_x (in /usr/lib/ld-2.32.so)
+==48734==    by 0x400DCAE: _dl_relocate_object (in /usr/lib/ld-2.32.so)
+==48734==    by 0x401559D: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4B38152: _dl_catch_error (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4BC7B88: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4BC73D7: dlopen (in /usr/lib/libdl-2.32.so)
+==48734== 
+==48734== 72,704 bytes in 1 blocks are still reachable in loss record 51 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x720345A: pool (eh_alloc.cc:123)
+==48734==    by 0x720345A: __static_initialization_and_destruction_0 (eh_alloc.cc:262)
+==48734==    by 0x720345A: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+==48734==    by 0x40112DD: call_init.part.0 (in /usr/lib/ld-2.32.so)
+==48734==    by 0x40113C7: _dl_init (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B380E4: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4015704: dl_open_worker (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4014F3D: _dl_open (in /usr/lib/ld-2.32.so)
+==48734==    by 0x4BC734B: ??? (in /usr/lib/libdl-2.32.so)
+==48734==    by 0x4B38087: _dl_catch_exception (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4B38152: _dl_catch_error (in /usr/lib/libc-2.32.so)
+==48734==    by 0x4BC7B88: ??? (in /usr/lib/libdl-2.32.so)
+==48734== 
+==48734== 120,427 bytes in 5,453 blocks are indirectly lost in loss record 52 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x49EFCB6: ???
+==48734==    by 0x49EFEBC: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 207,608 bytes in 5,385 blocks are indirectly lost in loss record 53 of 55
+==48734==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==48734==    by 0x4A8CB4E: strdup (in /usr/lib/libc-2.32.so)
+==48734==    by 0x49EFDAA: ???
+==48734==    by 0x49EFEBC: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 433,520 bytes in 4 blocks are indirectly lost in loss record 54 of 55
+==48734==    at 0x483CD7B: realloc (vg_replace_malloc.c:834)
+==48734==    by 0x49EFC3A: ???
+==48734==    by 0x49EFEBC: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== 763,532 (136 direct, 763,396 indirect) bytes in 1 blocks are definitely lost in loss record 55 of 55
+==48734==    at 0x483CB65: calloc (vg_replace_malloc.c:760)
+==48734==    by 0x49EFA5F: ???
+==48734==    by 0x49EFE3B: ???
+==48734==    by 0x49EFF22: ???
+==48734==    by 0x49D7150: ???
+==48734==    by 0x49D7BC3: ???
+==48734==    by 0x4D452FD: ??? (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4D4D8ED: hwloc_topology_load (in /usr/lib/libhwloc.so.15.2.0)
+==48734==    by 0x4980207: opal_hwloc_base_get_topology (in /usr/lib/openmpi/libopen-pal.so.40.20.5)
+==48734==    by 0x51E34C6: ???
+==48734==    by 0x48D0BC3: orte_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734==    by 0x48D547E: orte_submit_init (in /usr/lib/openmpi/libopen-rte.so.40.20.5)
+==48734== 
+==48734== LEAK SUMMARY:
+==48734==    definitely lost: 8,021 bytes in 13 blocks
+==48734==    indirectly lost: 766,101 bytes in 10,888 blocks
+==48734==      possibly lost: 0 bytes in 0 blocks
+==48734==    still reachable: 81,847 bytes in 25 blocks
+==48734==         suppressed: 0 bytes in 0 blocks
+==48734== 
+==48734== ERROR SUMMARY: 10 errors from 10 contexts (suppressed: 0 from 0)

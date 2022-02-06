@@ -1,0 +1,78 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 00:16:13 EDT 2020
+Job ID:     21760.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-9
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 00:16:13 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-6-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-8-l.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-9-l.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-10-l.pace.gatech.edu
+atl1-1-02-012-10-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+mcs num threads: 9
+avg time on 0 used in us: 8.270433
+avg time on 7 used in us: 8.270547
+avg time on 6 used in us: 8.270545
+avg time on 8 used in us: 8.270435
+avg time on 2 used in us: 8.270528
+avg time on 5 used in us: 8.270509
+avg time on 1 used in us: 8.270469
+avg time on 4 used in us: 8.270519
+avg time on 3 used in us: 8.270473
+dessimination barrier rank: 8
+dessimination barrier rank: 0
+dessimination barrier rank: 6
+dessimination barrier rank: 2
+dessimination barrier rank: 4
+dessimination barrier rank: 1
+dessimination barrier rank: 3
+dessimination barrier rank: 5
+dessimination barrier rank: 7
+Average time us: 6.489892 on proc: 0
+Average time us: 6.490266 on proc: 7
+Average time us: 6.489995 on proc: 6
+Average time us: 6.489930 on proc: 8
+Average time us: 6.489980 on proc: 2
+Average time us: 6.489942 on proc: 5
+Average time us: 6.489973 on proc: 3
+Average time us: 6.490002 on proc: 4
+Average time us: 6.490016 on proc: 1
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 00:16:27 EDT 2020
+Job ID:     21760.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-9
+Resources:  nodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1,mem=1gb,walltime=00:10:00,neednodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1
+Rsrc Used:  cput=00:00:10,vmem=2003684kb,walltime=00:00:12,mem=140924kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-10-l.pace.gatech.edu atl1-1-02-012-10-r.pace.gatech.edu 
+atl1-1-02-012-5-r.pace.gatech.edu atl1-1-02-012-6-l.pace.gatech.edu 
+atl1-1-02-012-6-r.pace.gatech.edu atl1-1-02-012-8-l.pace.gatech.edu 
+atl1-1-02-012-8-r.pace.gatech.edu atl1-1-02-012-9-l.pace.gatech.edu 
+atl1-1-02-012-9-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 00:16:27 EDT 2020
+---------------------------------------

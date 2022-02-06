@@ -1,0 +1,56 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 00:49:22 EDT 2020
+Job ID:     22229.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-5
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 00:49:22 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-8-l.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-8-l.pace.gatech.edu
+atl1-1-02-012-11-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+mcs num threads: 5
+mcs num threads: 5
+mcs num threads: 5
+mcs num threads: 5
+mcs num threads: 5
+avg time on 3 used in us: 4.923630
+avg time on 4 used in us: 4.923697
+avg time on 1 used in us: 4.923680
+avg time on 0 used in us: 4.923580
+avg time on 2 used in us: 4.923680
+dessimination barrier rank: 2
+dessimination barrier rank: 0
+dessimination barrier rank: 3
+dessimination barrier rank: 4
+dessimination barrier rank: 1
+Average time us: 4.673030 on proc: 1
+Average time us: 4.672947 on proc: 3
+Average time us: 4.673009 on proc: 4
+Average time us: 4.672925 on proc: 0
+Average time us: 4.673009 on proc: 2
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 00:49:28 EDT 2020
+Job ID:     22229.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-mpi-5
+Resources:  nodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1,mem=1gb,walltime=00:10:00,neednodes=1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1+1:ppn=1
+Rsrc Used:  cput=00:00:07,vmem=517700kb,walltime=00:00:05,mem=20180kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-11-l.pace.gatech.edu atl1-1-02-012-5-l.pace.gatech.edu 
+atl1-1-02-012-5-r.pace.gatech.edu atl1-1-02-012-6-l.pace.gatech.edu 
+atl1-1-02-012-8-l.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 00:49:29 EDT 2020
+---------------------------------------

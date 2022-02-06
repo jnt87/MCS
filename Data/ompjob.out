@@ -1,0 +1,135 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 02:27:07 EDT 2020
+Job ID:     23485.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-omp
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 02:27:07 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-8-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+CSR num threads: 2
+average time (ns): 117.639680 on thread: 0
+average time (ns): 117.611520 on thread: 1
+avg time in all threads in ms: 117.625600
+dissemination num threads: 2
+Average time (nano s): 194.020000 on thread: 0
+Average time (nano s): 194.020000 on thread: 1
+Average time (nano s): 194.020000
+CSR num threads: 3
+average time (ns): 241.159680 on thread: 0
+average time (ns): 241.139200 on thread: 2
+average time (ns): 241.149440 on thread: 1
+avg time in all threads in ms: 241.149440
+dissemination num threads: 3
+Average time (nano s): 511.100000 on thread: 0
+Average time (nano s): 511.080000 on thread: 2
+Average time (nano s): 511.090000 on thread: 1
+Average time (nano s): 511.090000
+CSR num threads: 4
+average time (ns): 353.978880 on thread: 0
+average time (ns): 353.971200 on thread: 2
+average time (ns): 353.971200 on thread: 1
+average time (ns): 353.950720 on thread: 3
+avg time in all threads in ms: 353.968000
+dissemination num threads: 4
+Average time (nano s): 544.630000 on thread: 2
+Average time (nano s): 544.630000 on thread: 1
+Average time (nano s): 544.620000 on thread: 3
+Average time (nano s): 544.640000 on thread: 0
+Average time (nano s): 544.630000
+CSR num threads: 5
+average time (ns): 494.530560 on thread: 0
+average time (ns): 494.530560 on thread: 1
+average time (ns): 494.530560 on thread: 2
+average time (ns): 494.520320 on thread: 4
+average time (ns): 494.530560 on thread: 3
+avg time in all threads in ms: 494.528512
+dissemination num threads: 5
+Average time (nano s): 808.280000 on thread: 2
+Average time (nano s): 808.280000 on thread: 1
+Average time (nano s): 808.280000 on thread: 3
+Average time (nano s): 808.290000 on thread: 0
+Average time (nano s): 808.270000 on thread: 4
+Average time (nano s): 808.280000
+CSR num threads: 6
+average time (ns): 640.058880 on thread: 0
+average time (ns): 640.048640 on thread: 2
+average time (ns): 640.048640 on thread: 3
+average time (ns): 640.048640 on thread: 1
+average time (ns): 640.048640 on thread: 4
+average time (ns): 640.038400 on thread: 5
+avg time in all threads in ms: 640.048640
+dissemination num threads: 6
+Average time (nano s): 833.580000 on thread: 0
+Average time (nano s): 833.570000 on thread: 3
+Average time (nano s): 833.570000 on thread: 2
+Average time (nano s): 833.570000 on thread: 4
+Average time (nano s): 833.560000 on thread: 5
+Average time (nano s): 833.570000 on thread: 1
+Average time (nano s): 833.570000
+CSR num threads: 7
+average time (ns): 765.271040 on thread: 0
+average time (ns): 765.260800 on thread: 4
+average time (ns): 765.260800 on thread: 3
+average time (ns): 765.260800 on thread: 2
+average time (ns): 765.260800 on thread: 5
+average time (ns): 765.250560 on thread: 6
+average time (ns): 765.260800 on thread: 1
+avg time in all threads in ms: 765.260800
+dissemination num threads: 7
+Average time (nano s): 879.040000 on thread: 0
+Average time (nano s): 879.030000 on thread: 4
+Average time (nano s): 879.030000 on thread: 2
+Average time (nano s): 879.030000 on thread: 5
+Average time (nano s): 879.030000 on thread: 3
+Average time (nano s): 879.020000 on thread: 6
+Average time (nano s): 879.030000 on thread: 1
+Average time (nano s): 879.030000
+CSR num threads: 8
+average time (ns): 1716.779520 on thread: 0
+average time (ns): 1716.779520 on thread: 6
+average time (ns): 1716.789760 on thread: 4
+average time (ns): 1716.789760 on thread: 3
+average time (ns): 1716.789760 on thread: 2
+average time (ns): 1716.789760 on thread: 1
+average time (ns): 1597.199360 on thread: 7
+average time (ns): 1716.789760 on thread: 5
+avg time in all threads in ms: 1701.838400
+dissemination num threads: 8
+Average time (nano s): 927.530000 on thread: 0
+Average time (nano s): 927.530000 on thread: 7
+Average time (nano s): 927.530000 on thread: 3
+Average time (nano s): 927.530000 on thread: 5
+Average time (nano s): 927.530000 on thread: 4
+Average time (nano s): 927.530000 on thread: 2
+Average time (nano s): 927.530000 on thread: 1
+Average time (nano s): 927.530000 on thread: 6
+Average time (nano s): 927.530000
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 02:27:11 EDT 2020
+Job ID:     23485.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-omp
+Resources:  nodes=1:ppn=8,mem=1gb,walltime=01:10:00,neednodes=1:ppn=8
+Rsrc Used:  cput=00:00:07,vmem=282592kb,walltime=00:00:03,mem=1432kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-8-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 02:27:11 EDT 2020
+---------------------------------------

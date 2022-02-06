@@ -1,0 +1,373 @@
+---------------------------------------
+Begin PBS Prologue Tue Oct 13 04:49:22 EDT 2020
+Job ID:     24182.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-combo-6
+Queue:      pace-ice
+End PBS Prologue Tue Oct 13 04:49:22 EDT 2020
+---------------------------------------
+Started on atl1-1-02-012-8-r.pace.gatech.edu
+Nodes chosen are:
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-8-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-9-r.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-l.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-5-r.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-l.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+atl1-1-02-012-6-r.pace.gatech.edu
+
+Lmod is automatically replacing "intel/19.0.5" with "gcc/8.3.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mvapich2/2.3.2
+
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):16778214.988800 on thread: 0 on proc: 0
+Average time (ns):16778215.193600 on thread: 1 on proc: 1
+Average time (ns):16777203.814400 on thread: 0 on proc: 1
+Average time (ns): 16777709.504000 on proc: 1
+Average time (ns):16776100.096000 on thread: 0 on proc: 2
+Average time (ns):16773400.089600 on thread: 0 on proc: 3
+Average time (ns):16778214.988800 on thread: 1 on proc: 3
+Average time (ns): 16775807.539200 on proc: 3
+Average time (ns):16774699.187200 on thread: 0 on proc: 4
+Average time (ns):16778214.886400 on thread: 1 on proc: 4
+Average time (ns): 16776457.036800 on proc: 4
+Average time (ns):16775000.192000 on thread: 0 on proc: 5
+Average time (ns):16778618.598400 on thread: 1 on proc: 5
+Average time (ns): 16776809.395200 on proc: 5
+Average time (ns):16778632.601600 on thread: 1 on proc: 2
+Average time (ns): 16777366.348800 on proc: 2
+Average time (ns):16779515.008000 on thread: 1 on proc: 0
+Average time (ns): 16778864.998400 on proc: 0
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):33765016.012800 on thread: 1 on proc: 0
+Average time (ns):33763798.912000 on thread: 0 on proc: 1
+Average time (ns):33762998.502400 on thread: 0 on proc: 2
+Average time (ns):33760299.904000 on thread: 1 on proc: 2
+Average time (ns):33765016.806400 on thread: 2 on proc: 4
+Average time (ns):33763799.808000 on thread: 0 on proc: 3
+Average time (ns):33763800.115200 on thread: 1 on proc: 3
+Average time (ns):33765018.905600 on thread: 0 on proc: 4
+Average time (ns):33764203.417600 on thread: 1 on proc: 1
+Average time (ns):33763401.907200 on thread: 2 on proc: 2
+Average time (ns): 33762233.437867 on proc: 2
+Average time (ns):33762503.193600 on thread: 0 on proc: 5
+Average time (ns):33762503.193600 on thread: 2 on proc: 5
+Average time (ns):33761604.300800 on thread: 1 on proc: 5
+Average time (ns): 33762203.562667 on proc: 5
+Average time (ns):33763316.377600 on thread: 2 on proc: 3
+Average time (ns):33765016.192000 on thread: 2 on proc: 0
+Average time (ns):33765842.304000 on thread: 1 on proc: 4
+Average time (ns): 33765292.672000 on proc: 4
+Average time (ns):33763799.014400 on thread: 2 on proc: 1
+Average time (ns): 33763933.781333 on proc: 1
+Average time (ns):33766616.294400 on thread: 0 on proc: 0
+Average time (ns): 33765549.499733 on proc: 0
+Average time (ns): 33763638.766933 on proc: 3
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):44017300.198400 on thread: 0 on proc: 0
+Average time (ns):44019105.510400 on thread: 0 on proc: 1
+Average time (ns):44019105.612800 on thread: 3 on proc: 1
+Average time (ns):44019105.203200 on thread: 2 on proc: 1
+Average time (ns):44017900.313600 on thread: 3 on proc: 0
+Average time (ns):44018705.203200 on thread: 0 on proc: 4
+Average time (ns):44018306.201600 on thread: 2 on proc: 4
+Average time (ns):44017404.492800 on thread: 2 on proc: 0
+Average time (ns):44017899.084800 on thread: 1 on proc: 3
+Average time (ns):44014941.491200 on thread: 1 on proc: 0
+Average time (ns): 44016886.624000 on proc: 0
+Average time (ns):44019105.408000 on thread: 1 on proc: 1
+Average time (ns): 44019105.433600 on proc: 1
+Average time (ns):44018399.180800 on thread: 0 on proc: 2
+Average time (ns):44018398.976000 on thread: 2 on proc: 2
+Average time (ns):44016900.096000 on thread: 3 on proc: 3
+Average time (ns):44018803.200000 on thread: 0 on proc: 3
+Average time (ns):44020514.688000 on thread: 0 on proc: 5
+Average time (ns):44020514.688000 on thread: 3 on proc: 5
+Average time (ns):44020514.278400 on thread: 2 on proc: 5
+Average time (ns):44016200.089600 on thread: 1 on proc: 2
+Average time (ns):44017706.009600 on thread: 2 on proc: 3
+Average time (ns): 44017827.097600 on proc: 3
+Average time (ns):44018705.203200 on thread: 1 on proc: 4
+Average time (ns):44018704.998400 on thread: 3 on proc: 4
+Average time (ns):44018398.796800 on thread: 3 on proc: 2
+Average time (ns):44019707.520000 on thread: 1 on proc: 5
+Average time (ns): 44020312.793600 on proc: 5
+Average time (ns): 44018605.401600 on proc: 4
+Average time (ns): 44017849.260800 on proc: 2
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):80737456.179200 on thread: 0 on proc: 0
+Average time (ns):80736599.091200 on thread: 0 on proc: 3
+Average time (ns):80735900.083200 on thread: 1 on proc: 1
+Average time (ns):80736798.694400 on thread: 2 on proc: 3
+Average time (ns):80736199.884800 on thread: 3 on proc: 3
+Average time (ns):80737211.008000 on thread: 3 on proc: 1
+Average time (ns):80736223.001600 on thread: 1 on proc: 3
+Average time (ns):80736800.000000 on thread: 2 on proc: 1
+Average time (ns):80737899.904000 on thread: 0 on proc: 1
+Average time (ns):80733499.315200 on thread: 0 on proc: 2
+Average time (ns):80735700.992000 on thread: 0 on proc: 5
+Average time (ns):80735700.505600 on thread: 1 on proc: 5
+Average time (ns):80737898.803200 on thread: 4 on proc: 1
+Average time (ns):80736101.913600 on thread: 2 on proc: 5
+Average time (ns):80737446.092800 on thread: 3 on proc: 0
+Average time (ns):80737455.692800 on thread: 2 on proc: 0
+Average time (ns):80736202.009600 on thread: 1 on proc: 0
+Average time (ns):80737458.508800 on thread: 4 on proc: 0
+Average time (ns): 80737203.696640 on proc: 0
+Average time (ns): 80737141.959680 on proc: 1
+Average time (ns):80734706.304000 on thread: 2 on proc: 2
+Average time (ns):80732400.102400 on thread: 1 on proc: 2
+Average time (ns):80732400.102400 on thread: 3 on proc: 2
+Average time (ns):80735404.902400 on thread: 4 on proc: 3
+Average time (ns): 80736245.114880 on proc: 3
+Average time (ns):80736702.003200 on thread: 3 on proc: 5
+Average time (ns):80741058.483200 on thread: 0 on proc: 4
+Average time (ns):80734301.696000 on thread: 4 on proc: 2
+Average time (ns): 80733461.504000 on proc: 2
+Average time (ns):80737999.001600 on thread: 4 on proc: 5
+Average time (ns):80741058.176000 on thread: 1 on proc: 4
+Average time (ns):80741462.195200 on thread: 2 on proc: 4
+Average time (ns):80741462.784000 on thread: 3 on proc: 4
+Average time (ns): 80736440.883200 on proc: 5
+Average time (ns):80738605.798400 on thread: 4 on proc: 4
+Average time (ns): 80740729.487360 on proc: 4
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):126149100.083200 on thread: 5 on proc: 0
+Average time (ns):126154598.707200 on thread: 5 on proc: 1
+Average time (ns):126156798.796800 on thread: 0 on proc: 3
+Average time (ns):126156800.691200 on thread: 1 on proc: 3
+Average time (ns):126157681.612800 on thread: 0 on proc: 0
+Average time (ns):126152803.507200 on thread: 4 on proc: 0
+Average time (ns):126153904.102400 on thread: 3 on proc: 1
+Average time (ns):126152803.712000 on thread: 1 on proc: 2
+Average time (ns):126156102.809600 on thread: 0 on proc: 5
+Average time (ns):126155503.616000 on thread: 2 on proc: 5
+Average time (ns):126150613.504000 on thread: 1 on proc: 1
+Average time (ns):126157005.081600 on thread: 1 on proc: 0
+Average time (ns):126154599.987200 on thread: 3 on proc: 0
+Average time (ns):126157604.608000 on thread: 5 on proc: 3
+Average time (ns):126154306.611200 on thread: 4 on proc: 1
+Average time (ns):126156307.020800 on thread: 2 on proc: 0
+Average time (ns):126154705.996800 on thread: 4 on proc: 2
+Average time (ns):126158886.502400 on thread: 0 on proc: 4
+Average time (ns):126158886.502400 on thread: 2 on proc: 4
+Average time (ns):126157208.499200 on thread: 4 on proc: 3
+Average time (ns):126156909.209600 on thread: 5 on proc: 5
+Average time (ns):126158894.899200 on thread: 1 on proc: 4
+Average time (ns):126156102.809600 on thread: 1 on proc: 5
+Average time (ns): 126154582.882133 on proc: 0
+Average time (ns):126158886.502400 on thread: 3 on proc: 4
+Average time (ns):126155110.016000 on thread: 2 on proc: 2
+Average time (ns):126158886.297600 on thread: 4 on proc: 4
+Average time (ns):126158886.502400 on thread: 5 on proc: 4
+Average time (ns):126152803.609600 on thread: 3 on proc: 2
+Average time (ns):126155199.820800 on thread: 0 on proc: 2
+Average time (ns):126157509.299200 on thread: 4 on proc: 5
+Average time (ns):126156611.584000 on thread: 0 on proc: 1
+Average time (ns):126153312.793600 on thread: 5 on proc: 2
+Average time (ns):126158811.084800 on thread: 2 on proc: 3
+Average time (ns):126157712.588800 on thread: 3 on proc: 3
+Average time (ns): 126153989.324800 on proc: 2
+Average time (ns):126157413.606400 on thread: 2 on proc: 1
+Average time (ns): 126157489.378133 on proc: 3
+Average time (ns): 126158887.867733 on proc: 4
+Average time (ns):126157100.313600 on thread: 3 on proc: 5
+Average time (ns): 126154574.685867 on proc: 1
+Average time (ns): 126156538.009600 on proc: 5
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):144422900.096000 on thread: 1 on proc: 0
+Average time (ns):144425472.614400 on thread: 3 on proc: 0
+Average time (ns):144426372.121600 on thread: 4 on proc: 0
+Average time (ns):144425399.884800 on thread: 5 on proc: 0
+Average time (ns):144426974.796800 on thread: 0 on proc: 0
+Average time (ns):144423100.083200 on thread: 4 on proc: 2
+Average time (ns):144424203.110400 on thread: 0 on proc: 5
+Average time (ns):144422004.019200 on thread: 5 on proc: 5
+Average time (ns):144427672.294400 on thread: 2 on proc: 0
+Average time (ns):144428275.686400 on thread: 0 on proc: 2
+Average time (ns):144428325.017600 on thread: 6 on proc: 2
+Average time (ns):144428172.185600 on thread: 6 on proc: 0
+Average time (ns):144423099.980800 on thread: 3 on proc: 5
+Average time (ns):144423102.284800 on thread: 2 on proc: 2
+Average time (ns):144422107.596800 on thread: 4 on proc: 4
+Average time (ns):144427884.108800 on thread: 5 on proc: 2
+Average time (ns):144426399.206400 on thread: 2 on proc: 1
+Average time (ns):144426399.001600 on thread: 6 on proc: 1
+Average time (ns):144424200.294400 on thread: 5 on proc: 1
+Average time (ns):144425302.092800 on thread: 6 on proc: 5
+Average time (ns):144425438.489600 on thread: 1 on proc: 5
+Average time (ns): 144426137.713371 on proc: 0
+Average time (ns):144422107.596800 on thread: 1 on proc: 4
+Average time (ns):144427204.608000 on thread: 2 on proc: 4
+Average time (ns):144426105.292800 on thread: 3 on proc: 2
+Average time (ns):144424766.796800 on thread: 3 on proc: 4
+Average time (ns):144427608.678400 on thread: 0 on proc: 4
+Average time (ns):144427469.004800 on thread: 1 on proc: 2
+Average time (ns): 144426323.068343 on proc: 2
+Average time (ns):144428598.912000 on thread: 0 on proc: 3
+Average time (ns):144427500.108800 on thread: 1 on proc: 3
+Average time (ns):144426801.510400 on thread: 3 on proc: 1
+Average time (ns):144425807.795200 on thread: 1 on proc: 1
+Average time (ns):144427799.910400 on thread: 5 on proc: 3
+Average time (ns):144428302.208000 on thread: 0 on proc: 1
+Average time (ns):144426102.297600 on thread: 2 on proc: 5
+Average time (ns):144426801.100800 on thread: 4 on proc: 5
+Average time (ns):144424603.315200 on thread: 4 on proc: 1
+Average time (ns): 144426073.333029 on proc: 1
+Average time (ns):144427604.608000 on thread: 2 on proc: 3
+Average time (ns):144427306.905600 on thread: 5 on proc: 4
+Average time (ns):144429508.121600 on thread: 6 on proc: 4
+Average time (ns): 144425801.472000 on proc: 4
+Average time (ns): 144424707.298743 on proc: 5
+Average time (ns):144430199.808000 on thread: 6 on proc: 3
+Average time (ns):144424707.916800 on thread: 4 on proc: 3
+Average time (ns):144428598.707200 on thread: 3 on proc: 3
+Average time (ns): 144427858.567314 on proc: 3
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+num procs: 6
+Average time (ns):161182800.102400 on thread: 1 on proc: 0
+Average time (ns):161185900.108800 on thread: 6 on proc: 0
+Average time (ns):161183798.886400 on thread: 4 on proc: 0
+Average time (ns):161185798.707200 on thread: 3 on proc: 0
+Average time (ns):161182800.102400 on thread: 1 on proc: 1
+Average time (ns):161187813.913600 on thread: 7 on proc: 0
+Average time (ns):161188411.724800 on thread: 2 on proc: 0
+Average time (ns):161187614.899200 on thread: 2 on proc: 3
+Average time (ns):161187121.305600 on thread: 1 on proc: 3
+Average time (ns):161189513.292800 on thread: 5 on proc: 0
+Average time (ns):161189510.988800 on thread: 3 on proc: 2
+Average time (ns):161187402.188800 on thread: 6 on proc: 3
+Average time (ns):161188499.916800 on thread: 7 on proc: 2
+Average time (ns):161188300.006400 on thread: 5 on proc: 3
+Average time (ns):161183000.089600 on thread: 6 on proc: 2
+Average time (ns):161183403.187200 on thread: 3 on proc: 1
+Average time (ns):161183898.700800 on thread: 7 on proc: 1
+Average time (ns):161190317.414400 on thread: 0 on proc: 0
+Average time (ns):161181202.483200 on thread: 5 on proc: 1
+Average time (ns):161184701.798400 on thread: 4 on proc: 1
+Average time (ns):161182999.884800 on thread: 6 on proc: 1
+Average time (ns):161189304.115200 on thread: 1 on proc: 2
+Average time (ns):161187605.299200 on thread: 4 on proc: 2
+Average time (ns):161185800.192000 on thread: 5 on proc: 4
+Average time (ns):161188805.785600 on thread: 2 on proc: 2
+Average time (ns): 161186794.268800 on proc: 0
+Average time (ns):161190367.308800 on thread: 0 on proc: 3
+Average time (ns):161186603.008000 on thread: 0 on proc: 1
+Average time (ns):161188805.683200 on thread: 7 on proc: 3
+Average time (ns):161185507.404800 on thread: 2 on proc: 1
+Average time (ns): 161183889.571200 on proc: 1
+Average time (ns):161186806.400000 on thread: 0 on proc: 4
+Average time (ns):161191518.003200 on thread: 0 on proc: 2
+Average time (ns):161188698.598400 on thread: 7 on proc: 5
+Average time (ns):161188700.902400 on thread: 0 on proc: 5
+Average time (ns):161187802.700800 on thread: 5 on proc: 2
+Average time (ns): 161188255.862400 on proc: 2
+Average time (ns):161186509.107200 on thread: 3 on proc: 4
+Average time (ns):161188698.598400 on thread: 2 on proc: 5
+Average time (ns):161186800.512000 on thread: 6 on proc: 4
+Average time (ns):161189903.308800 on thread: 3 on proc: 3
+Average time (ns):161186500.096000 on thread: 4 on proc: 5
+Average time (ns):161192010.393600 on thread: 4 on proc: 3
+Average time (ns):161186302.284800 on thread: 5 on proc: 5
+Average time (ns):161188701.081600 on thread: 7 on proc: 4
+Average time (ns):161185800.294400 on thread: 2 on proc: 4
+Average time (ns):161189909.708800 on thread: 6 on proc: 5
+Average time (ns): 161188940.636800 on proc: 3
+Average time (ns):161188911.616000 on thread: 3 on proc: 5
+Average time (ns):161187000.704000 on thread: 4 on proc: 4
+Average time (ns):161186013.081600 on thread: 1 on proc: 5
+Average time (ns): 161187966.860800 on proc: 5
+Average time (ns):161186200.089600 on thread: 1 on proc: 4
+Average time (ns): 161186702.297600 on proc: 4
+---------------------------------------
+Begin PBS Epilogue Tue Oct 13 06:30:57 EDT 2020
+Job ID:     24182.sched-pace-ice.pace.gatech.edu
+User ID:    jthomas8
+Job name:   cs6210-project2-combo-6
+Resources:  nodes=1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8,mem=1gb,walltime=06:00:00,neednodes=1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8+1:ppn=8
+Rsrc Used:  cput=13:27:40,vmem=30435396kb,walltime=01:41:19,mem=72788kb,energy_used=0
+Queue:      pace-ice
+Nodes:     
+atl1-1-02-012-5-l.pace.gatech.edu atl1-1-02-012-5-r.pace.gatech.edu 
+atl1-1-02-012-6-l.pace.gatech.edu atl1-1-02-012-6-r.pace.gatech.edu 
+atl1-1-02-012-8-r.pace.gatech.edu atl1-1-02-012-9-r.pace.gatech.edu
+End PBS Epilogue Tue Oct 13 06:31:10 EDT 2020
+---------------------------------------
